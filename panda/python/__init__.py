@@ -905,7 +905,7 @@ class Panda:
 
   # ******************* IR *******************
   def set_ir_power(self, percentage):
-    self._handle.controlWrite(Panda.REQUEST_OUT, 0xb0, 0, 0, b'')
+    pass#self._handle.controlWrite(Panda.REQUEST_OUT, 0xb0, 0, 0, b'')
 
   # ******************* Fan ******************
   def set_fan_power(self, percentage):
