@@ -153,7 +153,7 @@ class SelfdriveD:
     # Add startup event
     if self.startup_event is not None:
       self.events.add(self.startup_event)
-      subprocess.run(["bash", "/data/openpilot/beep.sh"], check=True)
+      subprocess.run(["sudo","bash", "/data/openpilot/beep.sh"], check=True)
       self.startup_event = None
 
     # Don't add any more events if not initialized
