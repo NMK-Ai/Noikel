@@ -22,6 +22,14 @@ from openpilot.selfdrive.selfdrived.alertmanager import AlertManager, set_offroa
 from openpilot.selfdrive.controls.lib.latcontrol import MIN_LATERAL_CONTROL_SPEED
 
 from openpilot.system.version import get_build_metadata
+import subprocess
+
+def beep(enable):
+  cmd = "/data/openpilot/beep_on.sh" if enable else "/data/openpilot/beep_off.sh"
+  try:
+    subprocess.Popen(["su", "-c", cmd])
+  except Exception as e:
+    print(f"Beeper command failed: {e}")
 
 
 REPLAY = "REPLAY" in os.environ
@@ -48,6 +56,18 @@ class SelfdriveD:
 
     # Ensure the current branch is cached, otherwise the first cycle lags
     build_metadata = get_build_metadata()
+    while True:
+  # 一些代码处理，读取车辆的状态等
+      CS = carState.get()
+
+  # 控制openpilot接管状态
+      if CS.enabled:
+        beep(True)   # openpilot 接管时，蜂鸣器响
+      elif not CS.enabled and engaged_prev:
+        beep(False)  # openpilot 退出接管时，蜂鸣器停
+
+  
+      time.sleep(0.1)  # 加入适当的延迟，避免占用过多 CPU
 
     if CP is None:
       cloudlog.info("selfdrived is waiting for CarParams")
@@ -503,4 +523,6 @@ def main():
   s.run()
 
 if __name__ == "__main__":
+  
   main()
+
