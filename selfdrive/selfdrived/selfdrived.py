@@ -153,9 +153,6 @@ class SelfdriveD:
     # Add startup event
     if self.startup_event is not None:
       self.events.add(self.startup_event)
-      echo 1 > /sys/class/gpio/gpio42/value
-      sleep 0.1
-      echo 0 > /sys/class/gpio/gpio42/value
       self.startup_event = None
 
     # Don't add any more events if not initialized
