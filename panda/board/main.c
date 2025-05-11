@@ -35,6 +35,7 @@ static bool check_started(void) {
   bool started = current_board->check_ignition() || ignition_can;
   return started;
 }
+static bool prev_heartbeat_engaged = false;
 
 void debug_ring_callback(uart_ring *ring) {
   char rcv;
@@ -173,6 +174,14 @@ static void tick_handler(void) {
     // decimated to 1Hz
     if (loop_counter == 0U) {
       can_live = pending_can_live;
+      // Check for engage event
+      if (!prev_heartbeat_engaged && heartbeat_engaged) {
+  // OpenPilot just engaged
+        print("OpenPilot engaged - sounding buzzer\n");
+        current_board->set_siren(true);     // 开启蜂鸣器
+        siren_countdown = 2U;               // 持续2秒，单位为tick（1Hz）
+      }
+      prev_heartbeat_engaged = heartbeat_engaged;
 
       //puth(usart1_dma); print(" "); puth(DMA2_Stream5->M0AR); print(" "); puth(DMA2_Stream5->NDTR); print("\n");
 
