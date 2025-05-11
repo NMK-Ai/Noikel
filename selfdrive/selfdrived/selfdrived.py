@@ -145,7 +145,12 @@ class SelfdriveD:
     if self.sm['controlsState'].lateralControlState.which() == 'debugState':
       self.events.add(EventName.joystickDebug)
       self.startup_event = None
-
+    if self.enabled and not self.active:  # 当激活
+        subprocess.run(["sudo", "bash", "/data/openpilot/beep.sh"], check=True)
+        self.active = True
+    elif not self.enabled and self.active:  # 当退出
+        subprocess.run(["sudo", "bash", "/data/openpilot/beep.sh"], check=True)
+        self.active = False
     if self.sm.recv_frame['alertDebug'] > 0:
       self.events.add(EventName.longitudinalManeuver)
       self.startup_event = None
