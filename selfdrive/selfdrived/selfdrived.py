@@ -22,17 +22,7 @@ from openpilot.selfdrive.selfdrived.alertmanager import AlertManager, set_offroa
 from openpilot.selfdrive.controls.lib.latcontrol import MIN_LATERAL_CONTROL_SPEED
 
 from openpilot.system.version import get_build_metadata
-from system.hardware.tici import beeper
-beeper.setup_beeper()
-engaged_prev = False
 
-# 在状态机循环中添加：
-if CS.enabled and not engaged_prev:
-    beeper.beep_on()
-elif not CS.enabled and engaged_prev:
-    beeper.beep_off()
-
-engaged_prev = CS.enabled
 
 REPLAY = "REPLAY" in os.environ
 SIMULATION = "SIMULATION" in os.environ
