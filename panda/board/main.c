@@ -175,8 +175,7 @@ static void tick_handler(void) {
     if (loop_counter == 0U) {
       can_live = pending_can_live;
       // Check for engage event
-      if (!prev_heartbeat_engaged && heartbeat_engaged) {
-  // OpenPilot just engaged
+      if (!prev_heartbeat_engaged && heartbeat_engaged) {  // OpenPilot just engaged
         print("OpenPilot engaged - sounding buzzer\n");
         current_board->set_siren(true);     // 开启蜂鸣器
         siren_countdown = 2U;               // 持续2秒，单位为tick（1Hz）
