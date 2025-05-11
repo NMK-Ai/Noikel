@@ -175,12 +175,11 @@ static void tick_handler(void) {
     if (loop_counter == 0U) {
       can_live = pending_can_live;
       // Check for engage event
-      if (controls_allowed) {  // OpenPilot just engaged
-        print("OpenPilot engaged - sounding buzzer\n");
-        current_board->set_siren(true);     // 开启蜂鸣器
-        siren_countdown = 2U;               // 持续2秒，单位为tick（1Hz）
+      if (controls_allowed && heartbeat_engaged) {
+        current_board->set_siren(true);   // 持续蜂鸣
+      } else {
+        current_board->set_siren(false);  // 停止蜂鸣
       }
-      prev_heartbeat_engaged = heartbeat_engaged;
 
       //puth(usart1_dma); print(" "); puth(DMA2_Stream5->M0AR); print(" "); puth(DMA2_Stream5->NDTR); print("\n");
 
