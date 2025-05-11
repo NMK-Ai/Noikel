@@ -22,7 +22,7 @@ from openpilot.selfdrive.selfdrived.alertmanager import AlertManager, set_offroa
 from openpilot.selfdrive.controls.lib.latcontrol import MIN_LATERAL_CONTROL_SPEED
 
 from openpilot.system.version import get_build_metadata
-from selfdrive.hardware.tici import beeper
+from system.hardware.tici import beeper
 beeper.setup_beeper()
 engaged_prev = False
 
