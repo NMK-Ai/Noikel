@@ -637,17 +637,17 @@ EVENTS: dict[int, dict[str, Alert | AlertCallbackType]] = {
 
   EventName.pcmEnable: {
     ET.ENABLE: EngagementAlert(AudibleAlert.engage),
-    subprocess.run(["sudo","bash", "/data/openpilot/beep.sh"], check=True)
+    subprocess.run(["sudo","bash", "/data/openpilot/beep.sh"], check=True)，
   },
 
   EventName.buttonEnable: {
     ET.ENABLE: EngagementAlert(AudibleAlert.engage),
-    subprocess.run(["sudo","bash", "/data/openpilot/beep.sh"], check=True)
+    subprocess.run(["sudo","bash", "/data/openpilot/beep.sh"], check=True)，
   },
 
   EventName.pcmDisable: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.disengage),
-    subprocess.run(["sudo","bash", "/data/openpilot/beep.sh"], check=True)
+    subprocess.run(["sudo","bash", "/data/openpilot/beep.sh"], check=True)，
   },
 
   EventName.buttonCancel: {
