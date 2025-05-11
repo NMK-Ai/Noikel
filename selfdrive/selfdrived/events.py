@@ -643,7 +643,7 @@ EVENTS: dict[int, dict[str, Alert | AlertCallbackType]] = {
   EventName.buttonEnable: {
     ET.ENABLE: EngagementAlert(AudibleAlert.engage),
 
-
+  },
   EventName.pcmDisable: {
     ET.USER_DISABLE: EngagementAlert(AudibleAlert.disengage),
 
