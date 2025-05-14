@@ -1,1 +1,1 @@
-#define COMMA_VERSION "定制版"
+#define COMMA_VERSION "NMK"
