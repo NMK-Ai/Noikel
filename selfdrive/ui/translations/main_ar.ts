@@ -2721,7 +2721,7 @@ This feature must be used along with SLC, and/or V-TSC, and/or M-TSC.</source>
     </message>
     <message>
         <source>Adjust Friction for the Torque Lateral Controller. &lt;b&gt;Live&lt;/b&gt;: Override self-tune values; &lt;b&gt;Offline&lt;/b&gt;: Override self-tune offline values at car restart.</source>
-        <translation>تعديل قيمة الاحتكاك لوحدة التحكم الجانبي بالعزم. <b>مباشر</b>: تجاوز قيم الضبط الذاتي؛ <b>غير متصل</b>: تجاوز القيم غير المتصلة عند إعادة تشغيل السيارة.</translation>
+        <translation>تعديل قيمة الاحتكاك لوحدة التحكم الجانبي بالعزم. &lt;b&gt;مباشر&lt;/b&gt;: تجاوز قيم الضبط الذاتي؛ &lt;b&gt;غير متصل&lt;/b&gt;: تجاوز القيم غير المتصلة عند إعادة تشغيل السيارة.</translation>
     </message>
     <message>
         <source>Real-time and Offline</source>
@@ -2740,9 +2740,9 @@ This feature must be used along with SLC, and/or V-TSC, and/or M-TSC.</source>
     </message>
     <message>
         <source>Adjust Max Lateral Acceleration for the Torque Lateral Controller. &lt;b&gt;Live&lt;/b&gt;: Override self-tune values; &lt;b&gt;Offline&lt;/b&gt;: Override self-tune offline values at car restart.</source>
-        <translation>تعديل الحد الأقصى للتسارع الجانبي لوحدة التحكم الجانبي بالعزم. <b>مباشر</b>: تجاوز قيم الضبط الذاتي؛ <b>غير متصل</b>: تجاوز القيم غير المتصلة عند إعادة تشغيل السيارة.</translation>
+        <translation>تعديل الحد الأقصى للتسارع الجانبي لوحدة التحكم الجانبي بالعزم. &lt;b&gt;مباشر&lt;/b&gt;: تجاوز قيم الضبط الذاتي؛ &lt;b&gt;غير متصل&lt;/b&gt;: تجاوز القيم غير المتصلة عند إعادة تشغيل السيارة.</translation>
     </message>
-    <message>
+        <message>
         <source>Real-time and Offline</source>
         <translation>في الوقت الحقيقي وغير متصل</translation>
     </message>
@@ -2873,9 +2873,9 @@ This feature must be used along with SLC, and/or V-TSC, and/or M-TSC.</source>
     </message>
     <message>
         <source>Enable this will display the built-in navigation in full screen.&lt;br&gt;To switch back to driving view, &lt;font color='yellow'&gt;tap on the border edge&lt;/font&gt;.</source>
-        <translation>تفعيل هذا الخيار سيعرض الملاحة المدمجة بوضع ملء الشاشة.<br>للعودة إلى عرض القيادة، <font color='yellow'>اضغط على حافة الإطار</font>.</translation>
+        <translation>تفعيل هذا الخيار سيعرض الملاحة المدمجة بوضع ملء الشاشة.&lt;br&gt;للعودة إلى عرض القيادة، &lt;font color='yellow'&gt;اضغط على حافة الإطار&lt;/font&gt;.</translation>
     </message>
-    <message>
+        <message>
         <source>Map: Display 3D Buildings</source>
         <translation>الخريطة: عرض المباني ثلاثية الأبعاد</translation>
     </message>
