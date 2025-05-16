@@ -40,7 +40,7 @@ def manager_init() -> None:
     ("GsmMetered", "1"),
     ("IsMetric", "1"),
     ("HasAcceptedTerms", "2"),
-    ("LanguageSetting", "main_zh-CHS"),
+    ("LanguageSetting", "main_ar_SA"),
     ("OpenpilotEnabledToggle", "1"),
     ("LongitudinalPersonality", str(custom.LongitudinalPersonalitySP.standard)),
 
